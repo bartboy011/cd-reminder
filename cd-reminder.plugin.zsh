@@ -12,7 +12,7 @@ new_reminder() {
     fi
 
     if [[ $# -gt 0 ]]; then
-        echo $1 >> .cd-reminder
+        echo $@ >> .cd-reminder
     fi
 }
 
