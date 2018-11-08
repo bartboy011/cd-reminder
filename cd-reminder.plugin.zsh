@@ -9,11 +9,10 @@ reminder_cd() {
 new_reminder() {
     if [[ $# -eq 0 ]]; then
         touch .cd-reminder
+        exit
     fi
 
-    if [[ $# -gt 0 ]]; then
-        echo $@ >> .cd-reminder
-    fi
+    echo $@ >> .cd-reminder
 }
 
 alias cd=reminder_cd
