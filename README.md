@@ -21,3 +21,8 @@ Additionally, you can use the command `new_reminder` which will do two things:
 you to fill as you please.
 * If you call `new_reminder This is my new reminder` it will create (if it doesn't exist already)
 a `.cd-reminder` file and append the text to it (meaning it won't override what's already in the file
+
+Having issues with these files messing with Git? Run the command `git_exclude_cd_reminder` -
+this will do one of two things - if you already have a global gitignore file configured,
+it will append to that file. Otherwise it will create the file `$HOME/.gitignore-global`,
+configure that file with Git, and then add our exclusion to it.
